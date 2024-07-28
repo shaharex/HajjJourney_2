@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hajj_journey/pages/home_page.dart';
-import 'package:hajj_journey/pages/learn_page.dart';
 import 'package:hajj_journey/webview/web_view_container.dart';
 
 import 'animations/wave_animations.dart';
