@@ -135,9 +135,17 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 300,
               ),
-              SizedBox(
-                width: 100,
-                child: Image.asset('/images/mosig.png'),
+              GestureDetector(
+                onTap: () => _showAboutDialog(
+                  context,
+                  'Mabit',
+                  'https://trigger.id/wp-content/uploads/2022/07/tenda-mina.jpg',
+                  'After having completed the salat of tawaf, the pilgrim now proceeds to the twelfth of the obligatory rituals of hajj known as mabit in Mina in the eves of 11th and 12th Dhil Hijja. “Mabit” means spending the night at a place.',
+                ),
+                child: SizedBox(
+                  width: 100,
+                  child: Image.asset('/images/mosig.png'),
+                ),
               ),
             ],
           ),
@@ -164,9 +172,17 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 100,
               ),
-              SizedBox(
-                width: 100,
-                child: Image.asset('/images/mosque.png'),
+              GestureDetector(
+                onTap: () => _showAboutDialog(
+                  context,
+                  'Miqat',
+                  'https://i.pinimg.com/474x/dc/5f/6a/dc5f6afcf3f23e88c8bc3012b632baf7.jpg',
+                  'Miqat (Arabic: ميقات) refers to the boundary where it becomes necessary for pilgrims to adorn the Ihram garments and impermissible to pass except in the state of Ihram.',
+                ),
+                child: SizedBox(
+                  width: 100,
+                  child: Image.asset('/images/mosque.png'),
+                ),
               ),
               const SizedBox(
                 height: 150,
