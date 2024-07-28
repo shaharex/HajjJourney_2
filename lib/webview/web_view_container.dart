@@ -9,13 +9,13 @@ class WebViewContainer extends StatefulWidget {
 }
 
 class _WebViewContainerState extends State<WebViewContainer> {
-  late final controller = WebViewController();
+  late final WebViewController controller;
 
   @override
   void initState() {
-    controller
+    controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.disabled)
-      ..loadRequest(Uri.parse('https://timursaurus.com/'));
+      ..loadRequest(Uri.parse('https://hajj.timursaurus.com/'));
 
     super.initState();
   }

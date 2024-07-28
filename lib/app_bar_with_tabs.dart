@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hajj_journey/pages/home_page.dart';
+import 'package:hajj_journey/pages/tour_page.dart';
 import 'package:hajj_journey/webview/web_view_container.dart';
 
 import 'animations/wave_animations.dart';
@@ -21,10 +22,28 @@ class _AppBarWithTabsState extends State<AppBarWithTabs>
   void initState() {
     super.initState();
     _tabController = TabController(length: 3, vsync: this);
+    _tabController?.addListener(_handleTabSelection);
   }
 
-  bool isDark = true;
-  bool isSelected = true;
+  void _handleTabSelection() {
+    if (_tabController?.indexIsChanging ?? false) {
+      if (_tabController?.index == 2) {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => WebViewContainer()),
+        ).then((_) {
+          _tabController?.index = 0;
+        });
+      }
+    }
+  }
+
+  @override
+  void dispose() {
+    _tabController?.removeListener(_handleTabSelection);
+    _tabController?.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -112,9 +131,9 @@ class _AppBarWithTabsState extends State<AppBarWithTabs>
         },
         body: TabBarView(
           controller: _tabController,
-          children: const [
+          children: [
             HomePage(),
-            Center(child: Text('New page')),
+            TourPage(),
             WebViewContainer(),
           ],
         ),
