@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hajj_journey/pages/home_page.dart';
+import 'package:hajj_journey/pages/learn_page.dart';
+import 'package:hajj_journey/webview/web_view_container.dart';
 
 import 'animations/wave_animations.dart';
 
@@ -47,7 +49,7 @@ class _AppBarWithTabsState extends State<AppBarWithTabs>
                     padding: const EdgeInsets.only(bottom: 40, top: 20),
                     alignment: Alignment.center,
                     child: Image.asset(
-                      "/logo/logo_hickmet.png",
+                      "assets/logo/logo_hickmet.png",
                     ),
                   ),
                   WaveAnimationDark(),
@@ -70,7 +72,7 @@ class _AppBarWithTabsState extends State<AppBarWithTabs>
                 ),
               ),
               backgroundColor: const Color(0xff040404),
-              pinned: true,
+              pinned: false,
               floating: false,
               snap: false,
               bottom: TabBar(
@@ -114,7 +116,7 @@ class _AppBarWithTabsState extends State<AppBarWithTabs>
           children: const [
             HomePage(),
             Center(child: Text('New page')),
-            Center(child: Text('New page')),
+            WebViewContainer(),
           ],
         ),
       ),
