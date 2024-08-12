@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +16,7 @@ class _HomePageState extends State<HomePage> {
         context: context,
         builder: (context) {
           return AlertDialog(
-            backgroundColor: Color.fromARGB(255, 13, 11, 11),
+            backgroundColor: const Color.fromARGB(255, 13, 11, 11),
             title: Text(
               title,
               textAlign: TextAlign.center,
@@ -129,7 +127,7 @@ class _HomePageState extends State<HomePage> {
                     'Ihram (Arabic: إحرام) refers to the sacred state a pilgrim must enter before carrying out the rites of Hajj and Umrah. '),
                 child: SizedBox(
                   width: 100,
-                  child: Image.asset('/images/clothes.png'),
+                  child: Image.asset('assets/images/clothes.png'),
                 ),
               ),
               const SizedBox(
@@ -144,7 +142,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: SizedBox(
                   width: 100,
-                  child: Image.asset('/images/mosig.png'),
+                  child: Image.asset('assets/images/mosig.png'),
                 ),
               ),
             ],
@@ -162,7 +160,7 @@ class _HomePageState extends State<HomePage> {
                     'The Ka’aba (“cube”) is the most sacred site in Islam, known as the sacred bayt Allah (House of God). It is located at the heart of the sacred mosque Masjid al-Haram in Mecca, Saudi Arabia.'),
                 child: SizedBox(
                   width: 150,
-                  child: Image.asset('/images/kaababa.png'),
+                  child: Image.asset('assets/images/kaababa.png'),
                 ),
               ),
             ],
@@ -181,7 +179,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: SizedBox(
                   width: 100,
-                  child: Image.asset('/images/mosque.png'),
+                  child: Image.asset('assets/images/mosque.png'),
                 ),
               ),
               const SizedBox(
@@ -196,7 +194,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 child: SizedBox(
                   width: 100,
-                  child: Image.asset('/images/umrahwh.png'),
+                  child: Image.asset('assets/images/umrahwh.png'),
                 ),
               ),
             ],

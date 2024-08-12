@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hajj_journey/app_bar_with_tabs.dart';
+import 'package:hajj_journey/pages/welcome_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AppBarWithTabs(),
+      home: WelcomePage(),
     );
   }
 }
